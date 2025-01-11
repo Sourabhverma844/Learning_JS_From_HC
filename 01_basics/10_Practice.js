@@ -10,3 +10,8 @@ accountCity = "Bengluru"
 
 console.log(accounId);
 console.table([accountEmail,accountPassword,accountCity]);
+
+"use strict"; // treat all JS code as newer version
+// but already hamara poora code newer version me hi run hota he
+
+alert(3+3)
