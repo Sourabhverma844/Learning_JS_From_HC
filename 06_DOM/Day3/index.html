@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning How To Create A New Element In DOM-2</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    //setAttribute values ko le ke nahi ata he, ye direct set karta he.
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    //div.innerText = "Sourabh Verma"
+   //inerText value ko overwrite karta he jo bhi text waha he use le ke ata he pahle and then jo value set kar rahe he unhe set karta he
+   // islie most of the developers prefer karte he ki direct textnode me data dia jae
+   const addText = document.createTextNode("Sourabh Verma")
+   div.appendChild(addText)
+   document.body.appendChild(div)
+</script>
+</html>
