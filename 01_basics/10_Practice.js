@@ -24,9 +24,17 @@ console.log(typeof undefined); // undefined gives us undefined in output
 console.log(typeof "Sourabh") // string
 
 let score1 = 33
-console.log(typeof score1)
+console.log(typeof score1);
 let score2 = "33"
-console.log(typeof score2)
+console.log(typeof score2);
 
 let valueInNumber = Number(score2)
-console.log(typeof score2)
+console.log(typeof score2);
+console.log(typeof valueInNumber);
+
+/*
+"33" => 33
+"33abc" => NaN
+true => 1
+false => 0
+*/
