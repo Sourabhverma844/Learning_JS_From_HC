@@ -79,11 +79,13 @@ console.log(id === anotherId)
 
 const bigNumber = 456574337592795368675n
 
-const heros = ["shaktiman", "nagraj", "doga"]
-let myObje = {
-    name: "hitesh",
+const heros = ['Shaktiman','Naagraj','Hatim']
+let myobj = {
+    name: "Sourabh",
     age: 22,
 }
-const myfunction = function(){
-    console.log("Hello World")
+let hello = function(){
+    console.log("hello");
 }
+console.log(typeof bigNumber);
+
