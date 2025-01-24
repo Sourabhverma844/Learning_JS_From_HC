@@ -89,3 +89,21 @@ let hello = function(){
 }
 console.log(typeof bigNumber);
 
+const empname = "Sourabh_Verma"
+const salary = "5000000 Per Anum"
+console.log(`Hi Welcome ${empname} in ripple, your Salary is ${salary}`);
+
+const gameName = 'Sourabhxyz'
+console.log(gameName[0]);
+console.log(gameName.__proto__);
+console.log(gameName.length)
+console.log(gameName.toUpperCase());
+console.log(gameName.charAt(2));
+console.log(gameName.indexOf('u'));
+
+const newString1 = gameName.substring(0, 4)
+console.log(newString1);
+
+const newString2 = gameName.slice(-10, 2)
+console.log(newString2);
+

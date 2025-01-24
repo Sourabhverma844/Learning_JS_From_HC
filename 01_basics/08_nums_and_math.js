@@ -6,15 +6,20 @@ console.log(Number.MIN_SAFE_INTEGER);
 const score = 400.50
 console.log(score);
 
-const balance = new Number (1000000)
+const balance = new Number (100000000)
 console.log(balance);
 
 console.log(balance.toString().length);
-console.log(balance.toFixed(1));
+console.log(balance.toFixed(2));
+
+const otherNumber = 23.8966
+console.log(otherNumber.toPrecision(3));
+console.log(otherNumber.toPrecision(2));
 
 //toLocaleString :- ye by default us standards ke hisab se output deta he 
-console.log(balance.toLocaleString());
-console.log(balance.toLocaleString('en-In')); //Indian standards me value dega
+let hundreds = 1000000
+console.log(hundreds.toLocaleString());
+console.log(hundreds.toLocaleString('en-In')); //Indian standards me value dega
 
 /* toPrecision :- Number of significant digits. Must be in the range 1-21,inclusive. it restruns a string containing a number represented either in exponential or fixed-point notation with a specified numbrt of digits*/
 console.log(balance.toPrecision(3)); //output 1.00e+6
