@@ -42,7 +42,7 @@ console.log(Math.min(0,1,2,3,4,5)); // Give min from array
 console.log(Math.max(0,1,2,3,4,5)); // Give max from array
 console.log(Math.random()); //Generates a random number between 0 (inclusive) and 1 (exclusive). means 0 a sakta he 1 kabhi nahi ayega
 
-const YourDigit = Math.floor(Math.random()*6+1)
+const YourDigit = Math.floor(Math.random()*6+1);
 console.log(YourDigit);
 
 const MyDigit = Math.floor((Math.random()*10)+10);
@@ -50,4 +50,4 @@ console.log(MyDigit);
 
 const min = 10
 const max = 20
-console.log(Math.random*(max-min+1));
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);

@@ -1,7 +1,13 @@
 /*
 Objects ko define karne ke 2 treeke he , ek he litral ki trha or ek he constructor ki trha.
-singleton object :- jab kbhi hum constructor ka use krke bnaenge to singleton object banta he. matlub ye apni trha ka ek hi object he. 
-objects that are not singleton :- jab bhi hum literals ka use karke banaenge to singaleton nahi banta he, uske multiple instances ban jate he.
+singleton object :- jab kbhi hum constructor ka use krke bnaenge to singleton object banta he. 
+matlub ye apni trha ka ek hi object he. 
+*/
+
+Object.create  //yahi he constructor method jisme singleton object banta he
+/* 
+objects that are not singleton :- jab bhi hum literals ka use karke banaenge to singaleton nahi banta he, 
+uske multiple instances ban jate he.
 */
 
 //object literals
@@ -14,10 +20,10 @@ const JsUser = {
     name: "Sourabh",
     "full name": "Sourabh Verma", //ise . se acess nahi kia ja sakta he
     age: 26,
-    mySym: "myKey1",//isse hum sym print kra lenge but type string ayega (ye sahi treeka nahi he)
+    mySym: "myKey1",//isse hum symbol print kra lenge but type string ayega (ye sahi treeka nahi he)
     [mySym]: "myKey2",//yaha actually me hum symbol ko refer kar rahe he
     location: "Bhopal",
-    email: "Sourabh@Blockchain.com",
+    email: "sourabhverma844@ripple.com",
     isLoggedIn: true,
     LastLoginDays:["Monday","Thrusday","Today"]
 }
@@ -32,10 +38,10 @@ console.log(typeof JsUser[mySym]);
 
 // hum object ki values ko . notation acess or change karte he 
 console.log(JsUser.email);
-JsUser.email = "SourabhVerma@solidity.com"
+JsUser.email = "sourabhverma@solidity.com"
 console.log(JsUser.email);
 //Object.freeze(JsUser) //Yaha hamne object ko freeze kar dia he so ab changes nahi ho paenge
-JsUser.email = "Aniketverma@gmail.com" //ye change ni ho paega kyoki object freeze he
+JsUser.email = "aniketverma@ripple.com" //ye change ni ho paega kyoki object freeze he
 console.log(JsUser);
 
 // remember javascript me jo bhi function hite he hum unhe variable ki trha treat kar sakte he.
