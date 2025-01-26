@@ -25,11 +25,12 @@ function handleObject(anyobject){
     console.log(`${anyobject.username} is working as a blockchain developer in ripple and his CTC is ${anyobject.salary} rs only.`);
 }
 handleObject(user)
+
 // hum direct objects bhi pas kar sakte the
 handleObject({
     username:"Aniket Verma",
     salary:"5000000"
-})
+}) //Aniket Verma is working as a blockchain developer in ripple and his CTC is 5000000 rs only.
 
 //array's ko hum kese function me pas kar sakte he
 //let jo hme array dia rahega hme uski 2nd value ko print karna he matlub index no 1 ko

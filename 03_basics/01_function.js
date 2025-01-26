@@ -1,6 +1,9 @@
 /*
 function ka seedha mean ye he ki jo bhi humne code likha he bda se use ek package me band kar dena.
-functio(Keyword) functionName(){functionScopre means Defination}
+function Keyword functionName()
+{
+functionScope means Defination
+}
 */
 function print()
 {
@@ -28,13 +31,17 @@ addTwoNumbers(3,"null")
 const res = addTwoNumbers(5,3)
 console.log("result is:",res);
 console.log(`Result is : ${res}`);
-/*Result ki value undefined ayi he, yahi sabse important concept he ki function se apne kya wapas bheja, kai log sochte he ki console log kia he to yahi value wapas gai hogi,nahi yahi sabse bdi galti he. 
-console print karne ka matlub ye nahi ki function wo value return bhi kar raha he, return apne ap me ek concept he or console sirf console print karta he
+/*
+Result ki value undefined ayi he, yahi sabse important concept he ki function se apne kya wapas bheja, 
+kai log sochte he ki console log kia he to yahi value wapas gai hogi,nahi yahi sabse bdi galti he. 
+console print karne ka matlub ye nahi ki function wo value return bhi kar raha he, 
+return apne ap me ek concept he or console sirf console print karta he.
 */
 function multTwoNumbers(number1,number2){
     let result = number1*number2
     return result
-    //result ke bad kuch bhi likhoge wo print nahi hoga
+    //function defination ka ek rule he ki return line ke bad kuch bhi likhoge wo print nahi hoga
+    //console.log("Hello") :- ye print nahi hoga
 }
 const result = multTwoNumbers(4,5)
 console.log("Result:",result);
@@ -48,7 +55,7 @@ console.log("ans:",ans);
 function loginUserMessage(username){
     return `${username} just logged in`
 }
-loginUserMessage("sourabh@ripple.com")//vale return ho gai but print nahi kyoki hamne kaha hi nahi print ke lie
+loginUserMessage("sourabh@ripple.com")//value return ho gai but print nahi kyoki hamne kaha hi nahi print ke lie
 console.log(loginUserMessage("sourabh844@ripple"));
 // if agar hum koi value pass hi na kre to undefined a jaega
 console.log(loginUserMessage());
@@ -58,12 +65,23 @@ function empRipple(username){
         console.log("Please enter a username");
         return
     }
-    return`${username} is a valuable emp of ripple`
+    return`${username} is a valuable employe of ripple`
 }
 console.log(empRipple());
 console.log(empRipple("SourabhVerma"));
 
-//ek treeke se or likhte he
+//ek treeke se or likhte he.
+// ! = ye exclamatory symbol he jo true ko false or false ko true me convert kar deta he.
+function loginStudentName(studentname){
+    if(!studentname){
+        console.log("Please Enter a studentname");
+        return
+    }
+    return `${studentname} just logged in`
+}
+console.log(loginStudentName("Sourabh"));
+console.log(loginStudentName());
+
 function job(profile="Blockchain dev"){
     if(!profile){
         console.log("please enter profile");
