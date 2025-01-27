@@ -1,10 +1,9 @@
 /* 
-for in loops
-syntax for for in loop :-
+for in loops 
+syntax for "for in" loop :-
 for (const key in object) {
-    
-}
 
+}
 */
 const emp = {
     name : 'Sourabh',
@@ -14,22 +13,38 @@ const emp = {
 for (const key in emp){
     console.log(key);
 }
+
+console.log("-------------------------------------------------------------------------")
+
 for (const key in emp){
     console.log(emp[key]);
 }
+
+console.log("-------------------------------------------------------------------------")
+
+
 for (const key in emp){
     console.log(`${key} is ${emp[key]}`);
 }
 
-//kya hum is for in loop ko arrays par use kar sakte he, lets do the practicle and see
+
+console.log("-------------------------------------------------------------------------")
+
+
+//Let's find out can we use "for in loop" on arrays
 
 const myHeros = ["myFather","Superman","Deadpool","Goku","Vegeeta","Zoro"]
 for (const name in myHeros){ // yaha jo mene name likha he waha koi bhi var name dia ja sakta he
     console.log(name); 
 }
+/*
+Output me Hme IndexNo.(key) milengi Jabki "for of loop" me hme direct values mil jati thi.
+
+kyoki array me by default jo uski index hoti jo 0 se start he wahi key he or wo by default numbers he, 
+thats why objects ka use hona suru hua jaha hum apni marji se key dal sakte he.
+*/
+
 for (const key in myHeros){
     console.log(myHeros[key]);
 }
-// output me hme index no milenge jabki for of loop me hme direct values mil jati thi
-// kyoki array me array ki index jo 0 sestart hoti he wo by default key hoti he 
-// thats why objects ka use hona suru hua jaha hum apni marji se key dal sakte he
+

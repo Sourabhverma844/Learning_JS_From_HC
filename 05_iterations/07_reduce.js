@@ -1,8 +1,8 @@
 /* 
 reduce :-
 the reduce () method executes a user-supplied "reducer" callback function on each element of the array, 
-in order, passing in the return value from the calculation on the preceding element. the final result of running 
-the reducer acros  all elements of the array is a single value.
+in order, passing in the return value from the calculation on the preceding element. 
+the final result of running the reducer acros  all elements of the array is a single value.
 */
 
 const myNums = [1, 2, 3]
