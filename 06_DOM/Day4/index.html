@@ -24,7 +24,7 @@
     }
     addLanguage("Solidity")
     addLanguage("Node.js")
-    // is apprach se listitem add to ho gya but yaha ek dikkat he , jab list iem add ho raha he
+    // is apprach se listitem add to ho gya but yaha ek dikkat he , jab list item add ho raha he
     // us waqt document me poore ke poore list item traverse hote he then last me append kia jata he
     // yaha 2 list item the to dikkat nahi hui but kisi code me lakho list item hue to dikkat hogi
 
@@ -51,8 +51,9 @@
     firstLang.outerHTML = `<li>TypeScript</li>`
 
     //remove
+    //this code remove rust language from language list 
+    // here we used backtics
     const lastLang = document.querySelector(`li:last-child`)
     lastLang.remove()
-
 </script>
 </html>
