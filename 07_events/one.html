@@ -114,6 +114,14 @@
 //     console.log("google clicked"); 
 // }, false)
 
-
+//Lets Try ki Jis Bhi Image pe click ho wo gayab ho jae
+document.querySelector('#images').addEventListener('click',function(e){
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode;
+        // removeIt.remove()         we can use thi or we can use 
+        removeIt.parentNode.removeChild(removeIt)
+    }
+}, false);
 </script>
 </html>
