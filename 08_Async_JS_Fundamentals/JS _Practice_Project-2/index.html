@@ -8,9 +8,25 @@
 </head>
 <body>
     <h1>Hi I am Sourabh Verma a Employee Of Ripple </h1>
+    <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
 <script>
-    
+    const sayDate = function(str){
+        console.log(str,Date.now());
+    };
+
+    let intervalId;
+
+    document.getElementById('start').addEventListener('click',function(){
+        if(!intervalId){
+        intervalId = setInterval(sayDate,1000,"Hi I am Sourabh");
+        }
+    });
+
+    document.getElementById('stop').addEventListener('click',function(){
+        clearInterval(intervalId);
+        intervalId = null;
+    });
 </script>
 </html>
