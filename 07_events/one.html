@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in HTML</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://plus.unsplash.com/premium_photo-1682434407124-f27bea689be8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG9zaG9wfGVufDB8fDB8fHww" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://plus.unsplash.com/premium_photo-1661964177687-57387c2cbd14?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SmFwYW58ZW58MHx8MHx8fDA%3D" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cml2ZXJ8ZW58MHx8MHx8fDA%3D" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.unsplash.com/photo-1549619856-ac562a3ed1a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b3dsfGVufDB8fDB8fHww" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJheWluZ3xlbnwwfHwwfHx8MA%3D%3D" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+//     #as we know Javascript me maximum events jo he wo sequetial hi hote he ha kuch execption bhi he.
+//     events always kisi activity par invoke hote he. jese cursor movement, hower, click , mouse drag etc.
+
+//     #hum owl ki image me html me oneclick="alert('owl')" kar sakte he but ye scalable aproch nahi he, 
+//     jab react ki bat hoti he to wo ek alag framework he jo ki pahle se scalable he to hum waha html me inject kar skte he.
+    
+//     #ye aproch me bhi ek prob he jab hum id pe onclick lagaenge to hme bahut jyada info nahi milegi to kuch problems ho sakti he.
+//     document.getElementById('owl').oneclick = function(){
+//          alert("owl clicked")
+//      }
+
+//     #we use event listners because event listners not only give us on click functionality but also give us ability of propogation
+//     sometimes interviewer may ask what is third parameter here
+//     .addEventListener('click',function(){},false)  3rd parameter By Default false he islia use likhne ki jarurat nahi he
+    
+//     #This is Best Approch 
+//     document.getElementById('owl').addEventListener('click', function(){
+//         alert("owl clicked again")
+//     })
+    
+//     #in recent times we also used attachEvent() when websites work on internet explorer
+//     jQuery-on "this is also used when JQuery is Famous"
+
+
+//     #Lets Do Talk About Our Event Object
+//     document.getElementById('owl').addEventListener('click',function(e){
+//         console.log(e);
+//     })
+    
+
+//     Que :- sometimes interviewer may ask ki konsa view tha, jis time pe apne click kia to pta lga ho window ki height or width kya thi
+//     ya kis time pe click hua ?    
+//     or ya fir kahe ki ek app bna do jaha bhi user kis time pe image me ya body me click kar raha ho to uska time hme btao
+//     Ans:- simple hme bus ye 1 line ka code likhan he 
+//     document.getElementById('owl').addEventListener('click',function(e){
+//         console.log(e);
+//     })
+
+
+//     #we should know about this events
+//     type, timestamp, defaultPrevented
+//     target, toElement, srcElement, currentTarget,
+//     clientX, clientY, screenX, screenY
+//     altkey, ctrlKey, shiftkey, keyCode
+
+
+//     #Let's Talk About Event Propogation
+//     1.) Event Bubbling
+//     2.) Event Capturing
+//     Hme Dono me Browser Events ki Properties to same hi milengi
+
+    
+//     Event Bubbling - ('click',function(){},false) - Just Like Bubble To ye neeche se uper jaega, child node se parent nodes ki taraf jaega
+//     we do not need to give 3rd parameter false because by default false is there.
+//     document.getElementById('images').addEventListener('click',function(e){
+//      console.log("clicked inside the url");
+//     },false);
+//     document.getElementById('owl').addEventListener('click',function(e){
+//      console.log("Owl is clicked");
+//     },false);
+
+
+//    Event Capturing - ('click',function(){},true) - Uper se neeche ayega, parent pahle then child.
+//    document.getElementById('images').addEventListener('click',function(e){
+//        console.log("clicked inside the url");
+//    },true)
+//     document.getElementById('japan').addEventListener('click',function(e){
+//      console.log("japan is clicked");
+//     },true)
+
+
+// # Sometimes we want to stop event bubbling like we want ki hamara event bubble hoke uper ke parent element par na jae
+// so we want ki inner element alag reh jae uska bubbling na ho or outer element alag rah gae 
+// here we can use stopPropagation to stop it
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log("clicked inside the ul");
+// }, false)
+
+// document.getElementById('owl').addEventListener('click',function(e){
+//     console.log("owl clicked");
+//     e.stopPropagation()
+// }, false)
+
+
+// #PreventDefault : iska use karke hum kisi element ke default nature ko stop kar sakte he.
+// for examp : Hamare pas ek link he to uspe click hote hi hme website pe redirect kia jaega but we want to stop that default nature.
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     e.preventDefault();
+//     e.stopPropagation();
+//     console.log("google clicked"); 
+// }, false)
+
+
+</script>
+</html>
