@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>..</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hi I am Sourabh Verma a Employee Of Ripple </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const SayHello = function(){
+        console.log("Sourabh");
+    }
+    const ChangeText = function(){
+        document.querySelector('h1').innerHTML = "Employee of The Year"
+    }
+    
+    //setTimeout(ChangeText, 3000)
+    //setInterval me hum time de dete he ki itne time ke gap me ap continously code ko execute karte jao
+    //setTimeout me hum miliseconds me time de sakte he ki itne time bad iska executio start kro
+    
+    // sometimes we want to stop the evet so we use this method clearTimeout
+    // clearTimeout need a refrence ki kis setTimeout ko ap htana chahte he
+
+    //1st method par yaha koi fayda hi ni hua ki setTimeout bhi laga dia or clearTimeout Bhi
+    //To Yaha Kitni Bhi Der Wait Kar Lenge Run Hi ni Hoga to Stop bhi nahi karna he
+    // const changeMe = setTimeout(changeText, 2000)
+    // clearTimeout(changeMe)
+
+    //2nd Method Hum kisi event pe clearTimeout ko lagaenge
+    const changeMe = setTimeout(ChangeText, 3000)
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+        let button = document.getElementById('stop');
+        button.style.backgroundColor = 'red'
+    })
+    document.querySelector('#stop').addEventListener('click',function(){
+    })
+</script>
+</html>
