@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiRequest</title>
+</head>
+<body>
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/sourabhverma844"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    //state ko continously track karne ke lie 
+    xhr.onreadystatechange = function(){
+        console.log(`ready state is : ${xhr.readyState}`);
+        if (xhr.readyState === 4){
+            //this.responseText se hamare pas poora data a gya
+            const githubdata1 = this.responseText
+            console.log(githubdata1)
+            //as we know . notation se hum object se data nikal sakte he
+            //console.log(githubdata1.blog);
+            //but yaha hamne try kia to undefined aya ab 
+            //console.log(typeof githubdata1)
+            //yes jab he hme url se response ayega to wo hamesa string me data dega
+            //ab hme us data ko acess karn ke lie use object me banana pdega
+            //to yaha hum string ko JSON me convert kar lenge.
+            const githubdata2 = JSON.parse(this.responseText)
+            console.log(githubdata2.blog);
+        }
+    }
+    //abhi open call nahi hua he const name.send se hoga islia xhr.send
+    xhr.send()
+</script>
+</html>
