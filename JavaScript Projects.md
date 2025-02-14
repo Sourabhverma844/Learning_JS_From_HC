@@ -15,6 +15,11 @@ Project Link - [Click here](https://github.com/Sourabhverma844/JSProject-3_Digit
 ## Project-4 "Guess_The_Number"
 Project Link - [Click here](https://github.com/Sourabhverma844/JSProject-4_Guess_The_Number)
 
-## Project-5 ""
-Project Link - [Click here](https://github.com/Sourabhverma844/JSProject-4_Guess_The_Number)
+## Project-5 "Keyboard_Check"
+Project Link - [Click here](https://github.com/Sourabhverma844/JSProject-5_Keyboard_Check)
+
+## Project-6 "Unlimited_Colors"
+Project Link - [Click here](https://github.com/Sourabhverma844/JSProject-6_Unlimited_Colors)
+
+
 
