@@ -22,4 +22,8 @@ Project Link - [Click here](https://github.com/Sourabhverma844/JSProject-5_Keybo
 Project Link - [Click here](https://github.com/Sourabhverma844/JSProject-6_Unlimited_Colors)
 
 
+## Project (idea)- "Github_Profile_Data"
+// Give me a github user username then i will provide you his profile and details
+// Get Help From XMLHttpRequest
+
 
