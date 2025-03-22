@@ -22,7 +22,7 @@ or hum ye bhi chahte he ki wo wahi par immediately execute ho jae.
 (function ripple(){
     console.log(`DB CONNECTED`);
 })(); //hmara concern ye he ki global scope se function pollute na ho.
-//syntax of iife ()() or (functiondefination)(execution)
+//syntax of iife ()() or (function defination)(execution)
 
 /*
 Que :- What is iife and why we use it ?
