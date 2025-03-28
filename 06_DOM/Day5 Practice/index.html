@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning How To Create A New Element In DOM-1</title>
+</head>
+<body style="background-color: #212121; color : white; display: flex; align-items: center; justify-content: center;">
+    <div class="parent">
+        <!-- This is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const divColor = function(bgcolor,text){
+        const div = document.createElement('div');
+        div.style.backgroundColor = `${bgcolor}`;
+        const yourtext = div.innerHTML = `${text}`;
+        // div.appendChild(yourtext);
+        div.style.width = "50px";
+        div.style.height = "50px";
+        document.body.appendChild(div)
+    }
+    UserChoice = [{bgcolor:"red",text:"Hello"},{bgcolor:"green",text:"Kese"},{bgcolor:"orange",text:"Ho"}]
+    for(let i=0; i<UserChoice.length;i++){
+        divColor(UserChoice[i].bgcolor,UserChoice[i].text)
+        console.log(i)
+    }
+    
+</script>
+</html>
